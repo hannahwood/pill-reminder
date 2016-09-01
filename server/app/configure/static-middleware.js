@@ -12,7 +12,6 @@ module.exports = function (app) {
   var browserPath = path.join(root, './browser');
   var buildPath = path.join(root, './build');
 
-  // app.use(favicon(app.getValue('faviconPath')));
   app.use(express.static(npmPath));
   app.use(express.static(browserPath));
   app.use(express.static(buildPath));
