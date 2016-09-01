@@ -1,0 +1,50 @@
+.home {
+    .patient {
+        background-color: white;
+        padding: 15px 30px;
+        margin-bottom: 10px;
+        @include box-shadow();
+        @include box-shadow-animation();
+        &:hover {
+        	color: black;
+        }
+        .patientInfo {
+            width: 45%;
+            float: left;
+            li {
+                display: inline;
+            }
+        }
+        .medList {
+            ul {
+                opacity: 0.7;
+                font-family: Consolas, monaco, monospace;
+                font-size: 9pt;
+                margin: 0;
+            }
+            .see-more {
+                font-weight: 800;
+                font-style: italic;
+            }
+        }
+        .round {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    // search bar-------------
+    .angucomplete-holder {
+        input {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .angucomplete-searching {
+        font-size: 20pt;
+        margin: 30px 0;
+        text-align: center;
+    }
+    // -----------------------
+}

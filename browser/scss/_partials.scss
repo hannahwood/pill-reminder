@@ -1,0 +1,79 @@
+// COLORS:
+$gray: #55585D;
+$blue: #6ED3CF;
+$purple: #9068BE;
+$light-gray: #F7F7F7;
+$red: #E62739;
+// HEADERS:
+@mixin header($font-size, $font-weight) {
+    margin: 0;
+    line-height: 1.5em;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+h1 {
+    @include header(20pt, 800);
+}
+
+h2 {
+    @include header(20pt, 400);
+}
+
+h4 {
+    @include header(12pt, 800);
+    color: $purple;
+    font-style: italic;
+}
+
+h5 {
+    @include header(14pt, 800);
+}
+
+ul {
+    @include header(inherit, inherit);
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+tr {
+    line-height: 2em;
+}
+
+// BUTTON:
+@mixin button($background-color, $color, $border, $border-radius, $padding) {
+	background-color: $background-color;
+	color: $color;
+	border: $border;
+	border-radius: $border-radius;
+	padding: $padding;
+}
+
+// BOX SHADOW:
+@mixin box-shadow-animation() {
+    transition: 0.3s linear;
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+@mixin box-shadow() {
+    box-shadow: 0px 3px 8px gray;
+}
+
+// SOME CENTERED ELEMENTS
+@mixin center-absolute() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

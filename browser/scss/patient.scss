@@ -1,0 +1,110 @@
+.patient {
+    background-color: white;
+    @include box-shadow();
+    .profile-header {
+        background-color: $gray;
+        color: white;
+        height: 100px;
+        padding: 0 5%;
+        div {
+            width: 33%;
+            text-align: center;
+        }
+        img {
+            @include center-absolute();
+            height: 150px;
+        }
+        #gender-age {
+            h2 {
+                white-space: pre;
+                font-size: 16pt;
+            }
+        }
+    }
+    .profile-details {
+        margin: 50px 8%;
+        padding-bottom: 100px;
+        ul {
+            margin: 100px 0;
+            .condition {
+                background-color: $light-gray;
+                padding: 10px;
+                h5 {
+                    text-align: center;
+                }
+                button {
+                    float: right;
+                    margin-top: -25px;
+                    margin-right: -9px;
+                }
+            }
+            .reminder-table {
+                .reminder-data {
+                    font-weight: 800;
+                    width: 12%;
+                    font-size: 12pt;
+                }
+                .default-data {
+                    width: 12%;
+                    opacity: .7;
+                    font-style: italic;
+                }
+            }
+            form {
+                width: 100%;
+                input {
+                    width: 13%;
+                }
+                div {
+                    margin: 1%;
+                    display: inline;
+                }
+                .submit-reminder {
+                    @include center-absolute();
+                    margin-top: 50px;
+                    @include button($red, white, none, 5px, 5px 20px);
+                    @include box-shadow();
+                    @include box-shadow-animation();
+                }
+                input[disabled] {
+                    opacity: .5;
+                    box-shadow: none;
+                }
+            }
+            .edit {
+            	@include button(inherit, $purple, none, 0, 5px);
+            	font-size: 8pt;
+            }
+            .delete {
+                @include button(inherit, $red, none, 0, 5px);
+                font-size: 8pt;
+            }
+        }
+        .add-condition {
+            background-color: $light-gray;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 2px 6px gray;
+            transition: 0.3s linear;
+            &:hover {
+                box-shadow: 0px 1px 3px gray;
+                ;
+            }
+            .add-condition-button {
+            	@include button(inherit, inherit, none, 0, 5px);
+            }
+            .submit-condition-button {
+                @include button($gray, white, none, 5px, 5px 20px);
+                @include box-shadow();
+                @include box-shadow-animation();
+            }
+        }
+    }
+}
+
+// to remove the arrows in the number input
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

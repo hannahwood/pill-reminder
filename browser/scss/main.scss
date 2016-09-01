@@ -1,0 +1,23 @@
+@import '_partials';
+body {
+    font-family: 'Jaldi', sans-serif;
+    margin: 0;
+    color: $gray;
+    background-color: $blue;
+    .container-card {
+        margin: 100px 20vw;
+    }
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    *:focus {
+        outline: none;
+    }
+}
+
+
+@import 'navbar';
+@import 'home';
+@import 'patient';

@@ -1,0 +1,32 @@
+.navbar {
+    // overriding bootstrap's navbar class
+    border-radius: 0;
+    border: none;
+    // -----------------------------------
+    color: white;
+    padding: 10px 100px;
+    background-color: $gray;
+    @include box-shadow();
+    h2 {
+        margin: 0;
+        float: left;
+    }
+    .menu {
+        margin: auto 0;
+        float: right;
+        list-style-type: none;
+        li {
+            margin-left: 60px;
+            display: inline;
+            cursor: pointer;
+            font-size: 13pt;
+        }
+        button {
+            @include button(inherit, $light-gray, 2px solid $light-gray, 5px, 8px 40px);
+            transition: 0.3s linear;
+            &:hover {
+                @include button($light-gray, $gray, 2px solid $light-gray, 5px, 8px 40px);
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+<div class="container-card patient">
+    <div class="flex profile-header">
+        <div>
+            <h2>{{ patient.lastName }}, {{ patient.firstName }}</h2></div>
+        <img ng-src="{{patient.imageUrl}}">
+        <div id="gender-age">
+            <h2><i>{{ patient.gender }}</i>   |   <i>{{ age }} years old</i></h2></div>
+    </div>
+    <div class="profile-details">
+        <ul ng-repeat="(condition, array) in patient.conditionsMeds">
+            <div class="condition">
+                <h5>{{ condition }}</h5>
+                <button class="change-reminder delete" ng-click="deleteCondition(condition)">delete</button>
+            </div>
+            <table class="reminder-table">
+                <tr ng-repeat="med in array">
+                    <td class="reminder-data">{{ med.dosage }}</td>
+                    <td class="default-data">of</td>
+                    <td class="reminder-data">{{ med.brand }}</td>
+                    <td class="default-data">taken</td>
+                    <td class="reminder-data">{{ med.frequency }}</td>
+                    <td class="default-data">times /</td>
+                    <td class="reminder-data">{{ med.timePeriod }}</td>
+                    <td class="default-data">until</td>
+                    <td class="reminder-data">{{ med.until | date:"MM/dd/yy"}}</td>
+                    <td>
+                        <button class="change-reminder edit" ng-click="editReminder(condition, $index)">edit</button>
+                    </td>
+                    <td>
+                        <button class="change-reminder delete" ng-click="deleteReminder(condition, $index)">delete</button>
+                    </td>
+                </tr>
+            </table>
+            <form name="newDrug" ng-submit="submitReminder(condition)">
+                <input placeholder="40mg" ng-model="patient[condition].dosage" required>
+                <div>of</div>
+                <input placeholder="Lipitor" ng-model="patient[condition].brand" required>
+                <div>taken</div>
+                <input placeholder=2 ng-model="patient[condition].frequency" list="frequency" type="number" required>
+                <datalist id="frequency">
+                    <option value=1></option>
+                    <option value=2></option>
+                    <option value=3></option>
+                    <option value=4></option>
+                    <option value=5></option>
+                </datalist>
+                <div>times/</div>
+                <input placeholder="day" ng-model="patient[condition].timePeriod" list="timePeriod" required>
+                <datalist id="timePeriod">
+                    <option value="day"></option>
+                    <option value="week"></option>
+                    <option value="month"></option>
+                </datalist>
+                <div>until</div>
+                <input type="text" placeholder="30-August-2016" ng-model="patient[condition].until" required uib-datepicker-popup="{{dateFormat}}" ng-model="dt" is-open="calendarPopup[condition].opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                <button type="button" ng-click="openCalendar(condition)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                <input class="submit-reminder" type="submit" ng-disabled="newDrug.$invalid" value="Submit Reminder">
+            </form>
+        </ul>
+        <div class="add-condition">
+            <button class="add-condition-button" ng-click="conditionFormToggle()">+ ADD CONDITION</button>
+            <form name="newCondtition" ng-show="addConditionForm" ng-submit="submitCondition()">
+                <input type="text" ng-model="newCondition" required>
+                <input class="submit-condition-button" type="submit" ng-disabled="newDrug.$invalid" value="Submit Condition">
+            </form>
+        </div>
+    </div>
+</div>

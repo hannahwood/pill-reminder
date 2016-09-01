@@ -1,0 +1,22 @@
+<div class="container-card home">
+    <angucomplete-alt class="search" placeholder="{{placeholder}}" pause="0" local-data="patients" local-search="localSearch" input-changed="localSearch" minlength="0" text-no-results="No patients found."></angucomplete-alt>
+    <div ng-repeat="patient in matches" class="patient">
+        <a ui-sref="patient({patientId: patient.id})" class="flex">
+            <img class="round" ng-src="{{patient.imageUrl}}">
+            <div class="patientInfo">
+                <h1>{{patient.lastName}}, {{patient.firstName}}</h1>
+                <ul>Conditions:
+                    <li ng-repeat="(condition, medications) in patient.conditionsMeds">
+                        {{condition}}{{$last ? '' : ', '}}
+                    </li>
+                </ul>
+            </div>
+            <div class="medList">
+                <ul ng-repeat="med in patient.threeMeds">
+                    <li>{{med.brand}}{{'.'.repeat(30-(med.brand.length + med.dosage.length))}}{{med.dosage}}</li>
+                </ul>
+                <h4 class="purple see-more" ng-if="patient.meds.length - patient.threeMeds.length">See {{patient.meds.length - patient.threeMeds.length}} more...</h4>
+            </div>
+        </a>
+    </div>
+</div>
