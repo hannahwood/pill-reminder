@@ -23,7 +23,7 @@
     }
     .profile-details {
         margin: 50px 8%;
-        padding-bottom: 100px;
+        padding-bottom: 60px;
         ul {
             margin: 100px 0;
             .condition {
@@ -88,7 +88,12 @@
             transition: 0.3s linear;
             &:hover {
                 box-shadow: 0px 1px 3px gray;
-                ;
+            }
+            form {
+                margin: 20px 0;
+                input {
+                    width: 180px;
+                }
             }
             .add-condition-button {
             	@include button(inherit, inherit, none, 0, 5px);
@@ -97,6 +102,7 @@
                 @include button($gray, white, none, 5px, 5px 20px);
                 @include box-shadow();
                 @include box-shadow-animation();
+                margin-left: 20px;
             }
         }
     }
