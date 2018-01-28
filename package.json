@@ -1,5 +1,5 @@
 {
-  "name": "pill reminder",
+  "name": "pill_reminder",
   "version": "1.0.0",
   "main": "server/start.js",
   "scripts": {
