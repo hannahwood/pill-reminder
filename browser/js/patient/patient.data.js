@@ -4,7 +4,7 @@ module.exports = [{
             lastName: 'Anderson',
             gender: 'male',
             dob: new Date(1985, 2, 19),
-            imageUrl: 'http://helpgrowchange.com/wp-content/uploads/2014/03/tb_profile_201303_round.png',
+            imageUrl: '/static/images/thomas.png',
             conditionsMeds: {
                 'ADHD': [{
                     'brand': 'Ritalin',
@@ -28,7 +28,7 @@ module.exports = [{
             lastName: 'Carter',
             gender: 'female',
             dob: new Date(1992, 11, 15),
-            imageUrl: 'http://startuup.co/images/Profile-Photo-Ashlie-Round.png',
+            imageUrl: '/static/images/regina.png',
             conditionsMeds: {
                 'Asthma': [{
                     'brand': 'Adderall',
@@ -80,7 +80,7 @@ module.exports = [{
             lastName: 'Chu',
             gender: 'female',
             dob: new Date(1992, 3, 10),
-            imageUrl: 'http://i1246.photobucket.com/albums/gg611/theofficechic/Design/profile-round.png',
+            imageUrl: '/static/images/jenny.png',
             conditionsMeds: {
                 'Cystic Fibrosis': [{
                     'brand': 'Adderall',
@@ -104,7 +104,7 @@ module.exports = [{
             lastName: 'Davidson',
             gender: 'female',
             dob: new Date(1995, 11, 1),
-            imageUrl: 'http://2.bp.blogspot.com/-mQqw7TAQvW4/VX4vn65C9TI/AAAAAAAABDQ/lrrNssmxc-g/s290/round%2Bprofile1.png',
+            imageUrl: '/static/images/caroline.png',
             conditionsMeds: {
                 'Asthma': [{
                     'brand': 'Adderall',
@@ -143,7 +143,7 @@ module.exports = [{
             lastName: 'Klein',
             gender: 'male',
             dob: new Date(1951, 9, 12),
-            imageUrl: 'http://tryzens.com/cms/wp-content/uploads/2016/01/Round-Profile-299x300.png',
+            imageUrl: '/static/images/richard.png',
             conditionsMeds: {
                 'Cystic Fibrosis': [{
                     'brand': 'Adderall',
@@ -174,7 +174,7 @@ module.exports = [{
             lastName: 'Owen',
             gender: 'female',
             dob: new Date(1962, 2, 1),
-            imageUrl: 'http://www.jacintacarboon.com/wp-content/uploads/2016/05/round-profile-pic-300x300.png',
+            imageUrl: '/static/images/anne.png',
             conditionsMeds: {
                 'High Blood Pressure': [{
                     'brand': 'Januvia',
@@ -191,7 +191,7 @@ module.exports = [{
             lastName: 'Singh',
             gender: 'male',
             dob: new Date(1990, 7, 22),
-            imageUrl: 'http://www.sanbadesigns.com/wp-content/uploads/2014/12/SantiProfilePic_Round-1.png',
+            imageUrl: '/static/images/rick.png',
             conditionsMeds: {
                 'Anxiety': [{
                     'brand': 'Januvia',
@@ -216,7 +216,7 @@ module.exports = [{
             lastName: 'Wen',
             gender: 'male',
             dob: new Date(1960, 12, 29),
-            imageUrl: 'http://www.hondaracingcorporation.com/core/wp-content/uploads/2014/09/548adc0a975334.20813636.png',
+            imageUrl: '/static/images/john.png',
             conditionsMeds: {
                 'Diabetes': [{
                     'brand': 'Januvia',
@@ -233,7 +233,7 @@ module.exports = [{
             lastName: 'Williams',
             gender: 'female',
             dob: new Date(1984, 6, 6),
-            imageUrl: 'http://anthonymk.com/wp-content/uploads/2015/02/profilePIC1_round-300x293.png',
+            imageUrl: '/static/images/ken.png',
             conditionsMeds: {
                 'Cystic Fibrosis': [{
                     'brand': 'Adderall',
